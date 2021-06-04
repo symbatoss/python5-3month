@@ -1,0 +1,19 @@
+
+{% extends 'layout.html' %}
+{% block content %}
+<h1>Добавить категорию</h1>
+<form action="/add/" method="post">
+    {% csrf_token %}
+    <label>
+        <input class="form-control" type="text" placeholder="Название категории" name="category_name">
+        <input type="submit" class="btn-primary" value="Отправить">
+    </label>
+
+</form>
+{#<h1>добавить категорию</h1>#}
+{#<form action="/add/" method="post">#}
+{#    {% csrf_token %}#}
+{#    {{ form }}#}
+{#    <input type="submit" value="Отправить">#}
+{#</form>#}
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h1 style=" color: blueviolet">Все продукты</h1>
+    <hr>
+{% for i in all_products %}
+    <a href="/products/{{ i.id }}/">
+        <p>{{ i.id }}.{{ i.title }}</p>
+    </a>
+    {% endfor %}
+     <nav aria-label="Page navigation example">
+  <ul class="pagination">
+      {% for button in  buttons %}
+       <li class="page-item"><a class="page-link"
+                                href="/products/?page={{ button }}">{{ button }}</a>
+       </li>
+{% endfor %}
+    </ul>
+</nav>
+{% endblock %}
+
+
