@@ -11,7 +11,8 @@ class CategoryForm(forms.Form):
                            required=True, label='Название',
                            widget=TextInput(
                                attrs={
-                                   'placeholder': 'Название категории'
+                                   'placeholder': 'Название категории',
+                                   'class': 'form-control'
                                }
                            ))
 

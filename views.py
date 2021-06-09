@@ -40,17 +40,6 @@ def get_one_product(request, id):
     return render(request, 'detail.html', context=data)
 
 
-def add_category(request):
-    if request.method == 'POST':
-        name = request.POST.get('category_name', '')
-        print(name)
-        Category.objects.create(name=name)
-        return redirect('/add/')
-    return render(request, 'add.html', context={
-        'username': auth.get_user(request).username
-    })
-
-
 def add(request):
     if request.method == 'POST':
         print(request.POST)

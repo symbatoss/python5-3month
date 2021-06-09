@@ -26,11 +26,4 @@ urlpatterns = [
     path('login/', views.login),
     path('logout/', views.logout),
     path('add_product/', views.add_product),
-
-
-
-
-
-
-
 ]
